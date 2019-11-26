@@ -18,3 +18,6 @@ This is pretty darn simple
     go build github.com/uberlinuxguy/suds
     
 This will build suds into your $GOPATH/bin directory.  You can run it from there, but where you run it, SUDS will create a `suds.db` file.  You should always make sure you run SUDS from the same directory to maintain state. Perhaps some day I will build in a preferences to set the db path, name, and some other stuff, but hey, this is 0.1 man!
+
+From here, you can check [SUDS JSON UDP Packet Structure](https://github.com/uberlinuxguy/suds/wiki/SUDS-JSON-UDP-Packet-Structure) for how to send data to SUDS.  SUDS takes UDP data in on port `10001`.  Then, when you are ready to grab the data, you hit the SUDS computer on port 8080.  For example: `http://suds-server:8080/dump/myTable`
+
