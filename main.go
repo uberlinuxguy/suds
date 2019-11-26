@@ -21,7 +21,7 @@ var udpClosed = false
 
 func main() {
 
-	InitDb("sqlite3", "./foo.db")
+	InitDb("sqlite3", "./suds.db")
 	defer db.Close()
 
 	// setup the udp listener
