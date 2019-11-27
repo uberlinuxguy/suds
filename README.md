@@ -6,16 +6,19 @@ SUDS is a **S**imple **U**DP **D**ata **S**tore.  Basically, you send it properl
 
 SUDS is currently in 0.1 version.  It's meant to be minimal, not complex, and intentionally not secure.  (So please don't tell me to put all kinds of security stuff in.)  
 
-## Requirements
-SUDS has the following requirements:
-
-- https://github.com/mattn/go-sqlite3
 
 ## Using SUDS
 This is pretty darn simple
 
+To install via `go get`:
+
     go get github.com/uberlinuxguy/suds
-    go build github.com/uberlinuxguy/suds
+
+Otherwise, you can clone and build manually:
+    
+    git clone https://github.com/uberlinuxguy/suds.git
+    cd suds
+    go install
     
 This will build suds into your $GOPATH/bin directory.  You can run it from there, but where you run it, SUDS will create a `suds.db` file.  You should always make sure you run SUDS from the same directory to maintain state. Perhaps some day I will build in a preferences to set the db path, name, and some other stuff, but hey, this is 0.1 man!
 
